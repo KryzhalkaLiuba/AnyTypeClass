@@ -27,45 +27,6 @@
         LongDouble = 14
     };
 
-    template <typename T>
-    TypeId TypeInfo()
-    {
-        if (std::is_same<T, bool>::value)
-            return TypeId::Bool;
-        if (std::is_same<T, char>::value)
-            return TypeId::SignedChar;
-        if (std::is_same<T, unsigned char>::value)
-            return TypeId::UnsignedChar;
-        if (std::is_same<T, wchar_t>::value)
-            return TypeId::WcharT;
-        if (std::is_same<T, int>::value)
-            return TypeId::Int;
-        if (std::is_same<T, unsigned int>::value)
-            return TypeId::UnsignedInt;
-        if (std::is_same<T, short int>::value)
-            return TypeId::ShortInt;
-        if (std::is_same<T, unsigned short int>::value)
-            return TypeId::UnsignedShortInt;
-        if (std::is_same<T, long int>::value)
-            return TypeId::LongInt;
-        if (std::is_same<T, unsigned long int>::value)
-            return TypeId::UnsignedLongInt;
-        if (std::is_same<T, long long int>::value)
-            return TypeId::LongLongInt;
-        if (std::is_same<T, unsigned long long int>::value)
-            return TypeId::UnsignedLongLongInt;
-        if (std::is_same<T, float>::value)
-            return TypeId::Float;
-        if (std::is_same<T, double>::value)
-            return TypeId::Double;
-        if (std::is_same<T, long double>::value)
-            return TypeId::LongDouble;
-
-        return TypeId::Undefined;
-    }
-
-
-
     
     class AnyType
     {
